@@ -1,10 +1,10 @@
-package com.websystique.springmvc.configuratio;
+package com.websystique.springmvc.configuration;
 
 import javax.servlet.Filter;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class HelloWorldInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class HelloWorldInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
@@ -20,15 +20,14 @@ public class HelloWorldInitializer extends AbstractAnnotationConfigDispatcherSer
 	@Override
 	protected String[] getServletMappings() {
 		// TODO Auto-generated method stub
-        return new String[] { "/" };
+		return null;
 	}
 	
-
-    @Override
-    protected Filter[] getServletFilters() {
-        Filter [] singleton = { new CORSFilter()};
-        return singleton;
-    }
+	@Override
+	protected Filter[] getServletFilters() {
+	    Filter [] singleton = { new CORSFilter()};
+	    return singleton;
+	}
 
 
 }
